@@ -1,0 +1,4 @@
+---
+# tasks file for /etc/ansible/roles/kube_deploy_master
+- import_tasks: install.yml
+- import_tasks: configure.yml
