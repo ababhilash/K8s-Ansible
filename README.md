@@ -1,7 +1,4 @@
-# K8s-Ansible
-Kubernetes cluster using Ansible Roles
-
-<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Objective_Kubernetes_cluster_setup_using_Ansible_0"></a>Objective: Kubernetes cluster setup usind Ansible</h1>
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Objective_Kubernetes_cluster_setup_using_Ansible_0"></a>Objective: Kubernetes cluster setup using Ansible</h1>
 <p class="has-line-data" data-line-start="2" data-line-end="3"><a href="https://travis-ci.org/joemccann/dillinger"><img src="https://travis-ci.org/joemccann/dillinger.svg?branch=master" alt="Build Status"></a></p>
 <h2 class="code-line" data-line-start=3 data-line-end=4 ><a id="Description_3"></a>Description:</h2>
 <hr>
@@ -57,7 +54,7 @@ I have initialized two roles, one for K8’s Master and one for K8’s nodes.</p
 <span class="hljs-comment"># ansible-galaxy init /etc/ansible/roles/kube_deploy_master --offline</span>
 - Role /etc/ansible/roles/kube_deploy_master was created successfully
 </code></pre>
-<h2 class="code-line" data-line-start=60 data-line-end=61 ><a id="Content_of_a_directories_60"></a>Content of a directories:</h2>
+<h2 class="code-line" data-line-start=60 data-line-end=61 ><a id="Structure_of_Ansible_roles_60"></a>Structure of Ansible roles:</h2>
 <p class="has-line-data" data-line-start="61" data-line-end="62">kube_deploy_all</p>
 <pre><code class="has-line-data" data-line-start="63" data-line-end="85" class="language-sh">[root@ip-<span class="hljs-number">172</span>-<span class="hljs-number">31</span>-<span class="hljs-number">86</span>-<span class="hljs-number">154</span> roles]<span class="hljs-comment"># tree kube_deploy_all/</span>
 kube_deploy_all/
