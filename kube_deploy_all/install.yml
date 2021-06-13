@@ -1,0 +1,16 @@
+- name: Install Docker
+  yum:
+     name: docker
+     state: present
+     update_cache: true
+
+- name: Install kubectl
+  yum:
+     name: kubelet-1.14.0
+     state: present
+     update_cache: true
+
+- name: Install kubeadm
+  yum:
+     name: kubeadm-1.14.0
+     state: present
