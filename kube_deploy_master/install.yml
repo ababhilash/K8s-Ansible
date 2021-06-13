@@ -1,0 +1,5 @@
+- name: Install kubectl
+  yum:
+    name: kubectl-1.14.0
+    state: present
+    allow_downgrade: yes
