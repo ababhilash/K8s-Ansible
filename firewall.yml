@@ -1,0 +1,30 @@
+- hosts: Kube-All
+  become: true
+  tasks:
+  - name: Open firewall ports for Kube
+    command: "{{item}}" 
+    with_items: 
+      - firewall-cmd --permanent --add-port=6443/tcp
+      - firewall-cmd --permanent --add-port=2379-2380/tcp
+      - firewall-cmd --permanent --add-port=10250/tcp
+      - firewall-cmd --permanent --add-port=10251/tcp
+      - firewall-cmd --permanent --add-port=10252/tcp
+      - firewall-cmd --permanent --add-port=10255/tcp
+
+  - name: Open CNI ports
+    command: "{{items}}"
+    with_items:    
+      - firewall-cmd --permanent --add-port=6783/tcp
+      - firewall-cmd --permanent --add-port=6784/tcp
+  
+  - name: Reload the firewall
+    command: firewall-cmd --reload
+
+- hosts: Kube-nodes
+  become: true
+  tasks:
+  - name: Open firewall ports for Kube nodes
+    command: "{{items}}"
+    with_items: 
+      - firewall-cmd --permanent --add-port=30000-32767/tcp
+      - firewall-cmd --reload
