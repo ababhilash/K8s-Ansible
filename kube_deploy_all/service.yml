@@ -1,0 +1,10 @@
+- name: Start Docker
+  service:
+     name: docker
+     state: started
+
+- name: Start kubelet
+  service:
+     name: kubelet
+     enabled: yes
+     state: started
