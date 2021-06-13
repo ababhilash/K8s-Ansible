@@ -12,7 +12,7 @@
 <ul>
 <li class="has-line-data" data-line-start="15" data-line-end="16">Step 1: Installed Ansible on a CentOS server.</li>
 <li class="has-line-data" data-line-start="16" data-line-end="17">Step 2: Made passwordless authentication with the Ansible server and the K8’s servers.</li>
-<li class="has-line-data" data-line-start="17" data-line-end="18">Step 3: Ran the script <strong><a href="http://configure.sh">configure.sh</a></strong> which is present under the root directory.</li>
+<li class="has-line-data" data-line-start="17" data-line-end="18">Step 3: Run the script <strong><a href="http://configure.sh">configure.sh</a></strong> which is present under the root directory.</li>
 <li class="has-line-data" data-line-start="18" data-line-end="22">Step 4: The script will ask for the details such as:
 <ol>
 <li class="has-line-data" data-line-start="19" data-line-end="20">The public IP address of K8’s master</li>
