@@ -1,0 +1,8 @@
+---
+- hosts: Kube-All
+  roles:
+  - kube_delploy_all
+
+- hosts: Kube-Master
+  roles:
+  - kube_delploy_master
