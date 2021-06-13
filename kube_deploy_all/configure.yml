@@ -1,0 +1,30 @@
+- name: Disable SELinux
+  command: sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+
+- name: Disable swap
+  command: swapoff -a
+
+- name: Disable SELinux on reboot
+  selinux:
+     state: disabled
+
+- name: Ensure the bridge-nf-call-ip6tables is set to 1
+  sysctl:
+     name: net.bridge.bridge-nf-call-ip6tables
+     value: 1
+     state: present
+
+- name: Ensure the bridge-nf-call-iptables is set to 1
+  sysctl:
+     name: net.bridge.bridge-nf-call-iptables
+     value: 1
+     state: present
+
+- name: Add kubernetes YUM repository
+  yum_repository:
+     name: Kubernetes
+     description: Kubernetes YUM repository
+     baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+     gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+     gpgcheck: yes
+     repo_gpgcheck: yes
